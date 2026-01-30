@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ความรู้และเคล็ดลับการทำขนม</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+  font-family:Tahoma,sans-serif;
+  background:#fffaf7;
+  color:#333;
+}
+
+/* HEADER */
+.header{
+  background:#fff;
+  border-bottom:1px solid #eee;
+}
+.header-inner{
+  max-width:1200px;
+  margin:auto;
+  padding:18px 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.logo{font-size:22px;font-weight:bold}
+.nav{display:flex;gap:20px}
+.nav a{text-decoration:none;color:#333;font-size:14px}
+.nav a:hover{color:#ff5fa2}
+
+/* TITLE */
+.page-title{
+  max-width:1000px;
+  margin:70px auto;
+  padding:0 20px;
+}
+.page-title h1{color:#ff5fa2;margin-bottom:10px}
+
+/* SECTION */
+.section{
+  max-width:1100px;
+  margin:90px auto;
+  padding:0 20px;
+}
+.section h2{
+  color:#ff5fa2;
+  margin-bottom:26px;
+}
+
+/* GRID */
+.card-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+
+/* CARD */
+.card{
+  background:#fff;
+  border-radius:26px;
+  padding:28px;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+  transition:.4s;
+  cursor:pointer;
+}
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 22px 45px rgba(255,95,162,.25);
+}
+.card h3{color:#ff5fa2;margin-bottom:8px}
+.card-short{font-size:15px;line-height:1.6}
+
+/* DETAIL */
+.card-detail{
+  max-height:0;
+  opacity:0;
+  overflow:hidden;
+  transition:.5s;
+}
+.card.active .card-detail{
+  max-height:800px;
+  opacity:1;
+  margin-top:12px;
+}
+.card-detail p{
+  font-size:14px;
+  line-height:1.9;
+  margin-top:10px;
+}
+
+/* SCROLL */
+.reveal{
+  opacity:0;
+  transform:translateY(40px);
+  transition:1s;
+}
+.reveal.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* FOOTER */
+.footer{
+  background:#ffd6d6;
+  margin-top:120px;
+}
+.footer-inner{
+  max-width:1200px;
+  margin:auto;
+  padding:40px 20px;
+  text-align:center;
+  font-size:14px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .nav{display:none}
+}
+</style>
+</head>
+
+<body>
+
+<header class="header reveal">
+  <div class="header-inner">
+    <div class="logo">เว็บไซต์ขั้นตอนการทำขนม</div>
+    <nav class="nav">
+      <a href="index.html">หน้าแรก</a>
+      <a href="recipes.html">สูตรขนม</a>
+      <a href="ingredients.html">วัตถุดิบ</a>
+      <a href="howto.html">ขั้นตอนการทำ</a>
+      <a href="tips.html">เคล็ดลับ</a>
+      <a href="contact.html">ติดต่อเรา</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-title reveal">
+  <h1>ความรู้และเคล็ดลับการทำขนม</h1>
+  <p>
+    รวบรวมความรู้ เทคนิค และข้อควรระวัง  
+    เพื่อให้การทำขนมมีคุณภาพและประสบความสำเร็จ
+  </p>
+</section>
+
+<!-- JS จะสร้างเนื้อหาตรงนี้ -->
+<div id="content"></div>
+
+<footer class="footer reveal">
+  <div class="footer-inner">
+    เว็บไซต์ขั้นตอนการทำขนม | จัดทำเพื่อการศึกษา
+  </div>
+</footer>
+
+<script src="js/tip.js"></script>
+</body>
+</html>

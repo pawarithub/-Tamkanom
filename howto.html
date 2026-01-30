@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ขั้นตอนการทำขนม</title>
+
+<style>
+/* ===== RESET ===== */
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family: Tahoma, sans-serif;
+  background:#fffaf7;
+  color:#333;
+}
+
+/* ===== HEADER ===== */
+.header{
+  background:#fff;
+  border-bottom:1px solid #eee;
+}
+
+.header-inner{
+  max-width:1200px;
+  margin:auto;
+  padding:18px 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  font-size:22px;
+  font-weight:bold;
+}
+
+.nav{
+  display:flex;
+  gap:20px;
+}
+
+.nav a{
+  text-decoration:none;
+  color:#333;
+  font-size:14px;
+}
+
+.nav a:hover{
+  color:#ff5fa2;
+}
+
+/* ===== PAGE TITLE ===== */
+.page-title{
+  max-width:1000px;
+  margin:70px auto;
+  padding:0 20px;
+}
+
+.page-title h1{
+  color:#ff5fa2;
+  margin-bottom:10px;
+}
+
+/* ===== STEP SECTION ===== */
+.step-section{
+  max-width:1000px;
+  margin:80px auto;
+  padding:0 20px;
+}
+
+/* HEADER STEP */
+.step-header{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  margin-bottom:14px;
+}
+
+.step-number{
+  width:56px;
+  height:56px;
+  background:#ff5fa2;
+  color:#fff;
+  font-size:26px;
+  font-weight:bold;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.step-header h2{
+  color:#ff5fa2;
+}
+
+/* BOX */
+.step-box{
+  background:#fff;
+  border-radius:26px;
+  padding:28px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  overflow:hidden;
+  transition:all 0.4s ease;
+}
+
+/* SUMMARY */
+.step-summary{
+  font-size:16px;
+  line-height:1.7;
+}
+
+/* DETAIL (HIDDEN) */
+.step-detail{
+  max-height:0;
+  opacity:0;
+  overflow:hidden;
+  transition:all 0.6s ease;
+}
+
+.step-detail p{
+  line-height:1.9;
+  margin-top:16px;
+}
+
+.step-detail img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  border-radius:18px;
+  margin-top:18px;
+}
+
+/* HOVER EXPAND */
+.step-box:hover{
+  transform:translateY(-8px);
+  box-shadow:0 20px 45px rgba(255,95,162,0.25);
+}
+
+.step-box:hover .step-detail{
+  max-height:1400px;
+  opacity:1;
+  margin-top:10px;
+}
+
+/* ===== SCROLL ANIMATION ===== */
+.reveal{
+  opacity:0;
+  transform:translateY(50px);
+  transition:all 1s ease;
+}
+
+.reveal.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* ===== FOOTER ===== */
+.footer{
+  background:#ffd6d6;
+  margin-top:100px;
+}
+
+.footer-inner{
+  max-width:1200px;
+  margin:auto;
+  padding:40px 20px;
+  text-align:center;
+  font-size:14px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+  .nav{
+    display:none;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="header reveal">
+  <div class="header-inner">
+    <div class="logo">เว็บไซต์ขั้นตอนการทำขนม</div>
+    <nav class="nav">
+      <a href="index.html">หน้าแรก</a>
+      <a href="recipes.html">สูตรขนม</a>
+      <a href="ingredients.html">วัตถุดิบ</a>
+      <a href="howto.html">ขั้นตอนการทำ</a>
+      <a href="tips.html">เคล็ดลับ</a>
+      <a href="contact.html">ติดต่อเรา</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== TITLE ===== -->
+<section class="page-title reveal">
+  <h1>ขั้นตอนการทำขนม</h1>
+  <p>
+    อธิบายขั้นตอนพื้นฐานในการทำขนมอย่างเป็นลำดับ  
+    ตั้งแต่การเตรียมวัตถุดิบจนถึงการตกแต่งก่อนเสิร์ฟ
+  </p>
+</section>
+
+<!-- ===== STEP 1 ===== -->
+<section class="step-section reveal">
+  <div class="step-header">
+    <div class="step-number">1</div>
+    <h2>เตรียมวัตถุดิบและอุปกรณ์</h2>
+  </div>
+
+  <div class="step-box">
+    <div class="step-summary">
+      ตรวจสอบวัตถุดิบและอุปกรณ์ให้ครบถ้วนก่อนเริ่มทำขนม
+    </div>
+
+    <div class="step-detail">
+      <p>
+        ก่อนเริ่มทำขนม ควรตรวจสอบวัตถุดิบทั้งหมดให้ครบถ้วน
+        เช่น แป้ง ไข่ นม น้ำตาล และเนย เพื่อป้องกันปัญหาการขาดวัตถุดิบ
+        ซึ่งอาจทำให้ขนมไม่สำเร็จตามที่ตั้งใจไว้
+      </p>
+      <p>
+        การชั่งตวงวัตถุดิบตามสัดส่วนที่ถูกต้อง
+        จะช่วยให้ขนมมีรสชาติและเนื้อสัมผัสที่เหมาะสม
+        รวมถึงช่วยลดความผิดพลาดระหว่างการทำ
+      </p>
+      <p>
+        ควรเตรียมอุปกรณ์ให้พร้อม เช่น ชามผสม ตะกร้อ เครื่องชั่ง
+        และเตาอบ เพื่อให้ขั้นตอนการทำเป็นไปอย่างราบรื่น
+      </p>
+      <img src="images/step-prepare.jpg" alt="">
+    </div>
+  </div>
+</section>
+
+<!-- ===== STEP 2 ===== -->
+<section class="step-section reveal">
+  <div class="step-header">
+    <div class="step-number">2</div>
+    <h2>ผสมวัตถุดิบ</h2>
+  </div>
+
+  <div class="step-box">
+    <div class="step-summary">
+      ผสมวัตถุดิบตามลำดับที่เหมาะสมให้เข้ากัน
+    </div>
+
+    <div class="step-detail">
+      <p>
+        เริ่มจากการผสมวัตถุดิบแห้งก่อน
+        จากนั้นจึงผสมวัตถุดิบของเหลวตามลำดับที่กำหนด
+        เพื่อให้ส่วนผสมเข้ากันอย่างสม่ำเสมอ
+      </p>
+      <p>
+        ควรผสมอย่างเบามือ ไม่คนแรงเกินไป
+        เพื่อป้องกันไม่ให้เนื้อขนมแข็งหรือแน่นเกินไป
+      </p>
+      <img src="images/step-mix.jpg" alt="">
+    </div>
+  </div>
+</section>
+
+<!-- ===== STEP 3 ===== -->
+<section class="step-section reveal">
+  <div class="step-header">
+    <div class="step-number">3</div>
+    <h2>อบหรือปรุงให้สุก</h2>
+  </div>
+
+  <div class="step-box">
+    <div class="step-summary">
+      นำส่วนผสมเข้าอบหรือปรุงให้สุกตามเวลาที่กำหนด
+    </div>
+
+    <div class="step-detail">
+      <p>
+        เทส่วนผสมลงพิมพ์และนำเข้าเตาอบ
+        โดยตั้งอุณหภูมิและเวลาตามที่เหมาะสม
+      </p>
+      <p>
+        ระหว่างอบควรหลีกเลี่ยงการเปิดเตาอบบ่อยครั้ง
+        เพื่อให้อุณหภูมิคงที่
+      </p>
+      <img src="images/step-bake.jpg" alt="">
+    </div>
+  </div>
+</section>
+
+<!-- ===== STEP 4 ===== -->
+<section class="step-section reveal">
+  <div class="step-header">
+    <div class="step-number">4</div>
+    <h2>พักและตกแต่ง</h2>
+  </div>
+
+  <div class="step-box">
+    <div class="step-summary">
+      พักขนมให้เย็นและตกแต่งก่อนเสิร์ฟ
+    </div>
+
+    <div class="step-detail">
+      <p>
+        เมื่อขนมสุกแล้ว ควรพักไว้ให้เย็น
+        เพื่อให้เนื้อขนมเซตตัวก่อนตกแต่ง
+      </p>
+      <p>
+        สามารถตกแต่งด้วยน้ำตาลไอซิ่ง ผลไม้
+        หรือซอสตามความเหมาะสม
+      </p>
+      <img src="images/step-decorate.jpg" alt="">
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer reveal">
+  <div class="footer-inner">
+    เว็บไซต์ขั้นตอนการทำขนม | จัดทำเพื่อการศึกษา
+  </div>
+</footer>
+
+<!-- ===== JS SCROLL ANIMATION ===== -->
+<script>
+const reveals = document.querySelectorAll('.reveal');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+},{ threshold:0.15 });
+
+reveals.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

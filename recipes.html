@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>สูตรขนม | เว็บไซต์ขั้นตอนการทำขนม</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="header">
+  <div class="header-inner">
+    <div class="logo">เว็บไซต์ขั้นตอนการทำขนม</div>
+
+    <nav class="nav">
+      <a href="index.html">หน้าแรก</a>
+      <a href="recipes.html">สูตรขนม</a>
+      <a href="ingredients.html">วัตถุดิบ</a>
+      <a href="howto.html">ขั้นตอนการทำ</a>
+      <a href="tips.html">เคล็ดลับ</a>
+      <a href="contact.html">ติดต่อเรา</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== PAGE TITLE ===== -->
+<section class="page-title reveal">
+  <h1>สูตรขนม</h1>
+  <p>
+    รวมสูตรขนมยอดนิยม เหมาะสำหรับผู้เริ่มต้น  
+    สามารถเลือกสูตรที่สนใจเพื่อศึกษาขั้นตอนการทำเพิ่มเติม
+  </p>
+</section>
+
+<!-- ===== CATEGORY ===== -->
+<section class="recipe-category reveal">
+  <span>ขนมอบ</span>
+  <span>ขนมง่าย</span>
+  <span>ขนมยอดนิยม</span>
+  <span>ขนมสำหรับมือใหม่</span>
+</section>
+
+<!-- ===== RECIPE LIST ===== -->
+<section class="recipe-list reveal">
+
+  <div class="recipe-card">
+    <img src="images/cakeCC.jpg" alt="เค้กช็อกโกแลต">
+    <h3>เค้กช็อกโกแลต</h3>
+    <p>เค้กเนื้อนุ่ม รสช็อกโกแลตเข้มข้น เหมาะสำหรับทุกโอกาส</p>
+    <a href="recipe-detail.html?id=cakeCC">ดูรายละเอียด</a>
+  </div>
+
+  <div class="recipe-card">
+    <img src="images/Cookies.jpg" alt="คุกกี้เนย">
+    <h3>คุกกี้เนย</h3>
+    <p>คุกกี้กรอบ หอมเนย ทำง่าย ใช้วัตถุดิบไม่มาก</p>
+    <a href="recipe-detail.html?id=Cookies">ดูรายละเอียด</a>
+  </div>
+
+  <div class="recipe-card">
+    <img src="images/brownies.jpg" alt="บราวนี่">
+    <h3>บราวนี่</h3>
+    <p>บราวนี่เนื้อหนึบ รสหวานมัน เหมาะสำหรับผู้ที่ชอบช็อกโกแลต</p>
+    <a href="recipe-detail.html?id=brownies">ดูรายละเอียด</a>
+  </div>
+
+  <div class="recipe-card">
+    <img src="images/sddefault.jpg" alt="ขนมปังอบ">
+    <h3>ขนมปังอบ</h3>
+    <p>ขนมปังเนื้อนุ่ม สามารถปรับไส้ได้หลายแบบ</p>
+    <a href="recipe-detail.html?id=sddefault">ดูรายละเอียด</a>
+  </div>
+
+  <div class="recipe-card">
+    <img src="images/cupcake.jpg" alt="มัฟฟิน">
+    <h3>มัฟฟิน</h3>
+    <p>มัฟฟินเนื้อนุ่ม เหมาะสำหรับเป็นของว่างหรืออาหารเช้า</p>
+    <a href="recipe-detail.html?id=cupcake">ดูรายละเอียด</a>
+  </div>
+
+  <div class="recipe-card">
+    <img src="images/pry.jpg" alt="พายผลไม้">
+    <h3>พายผลไม้</h3>
+    <p>พายกรอบ หอมเนย ตกแต่งด้วยผลไม้หลากสี</p>
+    <a href="recipe-detail.html?id=pry">ดูรายละเอียด</a>
+  </div>
+
+</section>
+
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="wave"></div>
+
+  <div class="footer-inner">
+    <div>
+      <strong>เว็บไซต์ขั้นตอนการทำขนม</strong><br>
+      จัดทำเพื่อการศึกษา
+    </div>
+
+    <div>
+      <strong>เมนูเว็บไซต์</strong><br>
+      หน้าแรก<br>
+      สูตรขนม<br>
+      วัตถุดิบ<br>
+      ขั้นตอนการทำ
+    </div>
+
+    <div>
+      <strong>ข้อมูลสูตรขนม</strong><br>
+      สูตรยอดนิยม<br>
+      สูตรทำง่าย
+    </div>
+
+    <div>
+      <strong>ติดต่อเรา</strong><br>
+      ผู้จัดทำเว็บไซต์
+    </div>
+  </div>
+</footer>
+
+<!-- ===== SCROLL ANIMATION ===== -->
+<script>
+const reveals = document.querySelectorAll('.reveal');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+},{ threshold:0.15 });
+
+reveals.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

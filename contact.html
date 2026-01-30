@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ติดต่อเรา</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+  font-family:Tahoma,sans-serif;
+  background:#fffaf7;
+  color:#333;
+}
+
+/* ===== HEADER ===== */
+.header{
+  background:#fff;
+  border-bottom:1px solid #eee;
+}
+.header-inner{
+  max-width:1200px;
+  margin:auto;
+  padding:18px 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.logo{font-size:22px;font-weight:bold}
+.nav{display:flex;gap:20px}
+.nav a{text-decoration:none;color:#333;font-size:14px}
+.nav a:hover{color:#ff5fa2}
+
+/* ===== TITLE ===== */
+.page-title{
+  max-width:1000px;
+  margin:70px auto;
+  padding:0 20px;
+}
+.page-title h1{
+  color:#ff5fa2;
+  margin-bottom:10px;
+}
+.page-title h1::before{
+  content:"📮 ";
+}
+
+/* ===== SECTION ===== */
+.section{
+  max-width:1100px;
+  margin:80px auto;
+  padding:0 20px;
+}
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+}
+
+/* ===== INFO ===== */
+.info-box{
+  background:#fff;
+  border-radius:26px;
+  padding:30px;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+.info-box h2{
+  color:#ff5fa2;
+  margin-bottom:16px;
+}
+.info-box p{
+  line-height:1.8;
+  margin-bottom:12px;
+}
+
+/* ===== FORM ===== */
+.form-box{
+  background:#fff;
+  border-radius:26px;
+  padding:30px;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+  position:relative;
+}
+.form-box h2{
+  color:#ff5fa2;
+  margin-bottom:16px;
+}
+
+form{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+input, textarea{
+  padding:14px;
+  border-radius:14px;
+  border:1px solid #ddd;
+  font-size:14px;
+  transition:.3s;
+}
+input:focus, textarea:focus{
+  outline:none;
+  border-color:#ff5fa2;
+  box-shadow:0 0 0 3px rgba(255,95,162,.15);
+}
+textarea{
+  resize:none;
+  height:120px;
+}
+
+/* BUTTON */
+button{
+  background:linear-gradient(135deg,#ff5fa2,#ff9f68);
+  color:#fff;
+  border:none;
+  padding:14px;
+  border-radius:18px;
+  font-size:15px;
+  cursor:pointer;
+  transition:.3s;
+  position:relative;
+  overflow:hidden;
+}
+button.loading{
+  pointer-events:none;
+  background:#ccc;
+}
+button.loading::after{
+  content:"⏳ กำลังส่ง...";
+}
+
+/* SUCCESS BOX */
+.success-box{
+  position:absolute;
+  top:20px;
+  left:20px;
+  right:20px;
+  background:#e6fff1;
+  border:1px solid #4dd599;
+  color:#2e7d5a;
+  padding:16px;
+  border-radius:16px;
+  text-align:center;
+  opacity:0;
+  transform:translateY(-10px);
+  transition:.5s;
+}
+.success-box.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* ===== SCROLL ANIMATION ===== */
+.reveal{
+  opacity:0;
+  transform:translateY(40px);
+  transition:1s;
+}
+.reveal.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* ===== FOOTER ===== */
+.footer{
+  background:#ffd6d6;
+  margin-top:120px;
+}
+.footer-inner{
+  max-width:1200px;
+  margin:auto;
+  padding:40px 20px;
+  text-align:center;
+  font-size:14px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:900px){
+  .contact-grid{grid-template-columns:1fr}
+  .nav{display:none}
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header reveal">
+  <div class="header-inner">
+    <div class="logo">เว็บไซต์ขั้นตอนการทำขนม</div>
+    <nav class="nav">
+      <a href="index.html">หน้าแรก</a>
+      <a href="recipes.html">สูตรขนม</a>
+      <a href="ingredients.html">วัตถุดิบ</a>
+      <a href="howto.html">ขั้นตอนการทำ</a>
+      <a href="tips.html">เคล็ดลับ</a>
+      <a href="contact.html">ติดต่อเรา</a>
+    </nav>
+  </div>
+</header>
+
+<!-- TITLE -->
+<section class="page-title reveal">
+  <h1>ติดต่อเรา</h1>
+  <p>
+    หากมีคำถามหรือข้อเสนอแนะเกี่ยวกับการทำขนม  
+    สามารถส่งข้อความถึงเราได้
+  </p>
+</section>
+
+<!-- CONTENT -->
+<section class="section">
+  <div class="contact-grid">
+
+    <div class="info-box reveal">
+	<h2>📌 ข้อมูลติดต่อ</h2>
+      <p>📧 example@email.com</p>
+      <p>📞 099-999-9999</p>
+    </div>
+
+    <div class="form-box reveal">
+      <div class="success-box" id="successBox">
+        ✅ ส่งข้อความเรียบร้อยแล้ว<br>
+        ขอบคุณที่ติดต่อเรา
+      </div>
+
+      <h2>✉️ ส่งข้อความ</h2>
+
+      <form id="contactForm">
+        <input type="text" placeholder="ชื่อของคุณ" required>
+        <input type="email" placeholder="อีเมล" required>
+        <textarea placeholder="ข้อความที่ต้องการติดต่อ" required></textarea>
+        <button type="submit" id="sendBtn">ส่งข้อความ</button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer reveal">
+  <div class="footer-inner">
+    เว็บไซต์ขั้นตอนการทำขนม | จัดทำเพื่อการศึกษา
+  </div>
+</footer>
+
+<script>
+/* ===== FORM SUBMIT EFFECT ===== */
+const form = document.getElementById("contactForm");
+const successBox = document.getElementById("successBox");
+const btn = document.getElementById("sendBtn");
+
+form.addEventListener("submit", e=>{
+  e.preventDefault();
+
+  btn.classList.add("loading");
+  btn.textContent = "";
+
+  setTimeout(()=>{
+    btn.classList.remove("loading");
+    btn.textContent = "ส่งข้อความ";
+
+    successBox.classList.add("show");
+    form.reset();
+
+    setTimeout(()=>{
+      successBox.classList.remove("show");
+    },3000);
+
+  },1500);
+});
+
+/* ===== SCROLL ANIMATION ===== */
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+},{threshold:0.15});
+reveals.forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>

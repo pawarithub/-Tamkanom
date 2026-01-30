@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>วัตถุดิบและอุปกรณ์</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="header">
+  <div class="header-inner">
+    <div class="logo">เว็บไซต์ขั้นตอนการทำขนม</div>
+
+    <nav class="nav">
+      <a href="index.html">หน้าแรก</a>
+      <a href="recipes.html">สูตรขนม</a>
+      <a href="ingredients.html">วัตถุดิบ</a>
+      <a href="howto.html">ขั้นตอนการทำ</a>
+      <a href="tips.html">เคล็ดลับ</a>
+      <a href="contact.html">ติดต่อเรา</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== PAGE TITLE ===== -->
+<section class="page-title reveal">
+  <h1>วัตถุดิบและอุปกรณ์</h1>
+  <p>
+    รายการวัตถุดิบและอุปกรณ์พื้นฐานที่ใช้ในการทำขนม  
+    เหมาะสำหรับผู้เริ่มต้น
+  </p>
+</section>
+
+<!-- ===== INGREDIENT SECTION ===== -->
+<section class="ingredient-section reveal">
+  <h2>วัตถุดิบหลัก</h2>
+
+  <div class="ingredient-grid">
+    <div class="ingredient-card">
+      <img src="images/ingredient-flour.jpg" alt="แป้ง">
+      <h3>แป้ง</h3>
+      <p>เป็นส่วนประกอบหลักในการทำขนมหลายชนิด</p>
+    </div>
+
+    <div class="ingredient-card">
+      <img src="images/ingredient-egg.jpg" alt="ไข่">
+      <h3>ไข่</h3>
+      <p>ช่วยเพิ่มความนุ่มและโครงสร้างของขนม</p>
+    </div>
+
+    <div class="ingredient-card">
+      <img src="images/ingredient-milk.jpg" alt="นม">
+      <h3>นม</h3>
+      <p>เพิ่มความหอมและความชุ่มชื้นให้ขนม</p>
+    </div>
+
+    <div class="ingredient-card">
+      <img src="images/ingredient-sugar.jpg" alt="น้ำตาล">
+      <h3>น้ำตาล</h3>
+      <p>ให้รสหวานและช่วยให้ขนมมีสีสวย</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TOOLS SECTION ===== -->
+<section class="ingredient-section soft-bg reveal">
+  <h2>อุปกรณ์ที่จำเป็น</h2>
+
+  <div class="ingredient-grid">
+    <div class="ingredient-card">
+      <img src="images/tool-oven.jpg" alt="เตาอบ">
+      <h3>เตาอบ</h3>
+      <p>ใช้สำหรับอบขนมให้สุกอย่างสม่ำเสมอ</p>
+    </div>
+
+    <div class="ingredient-card">
+      <img src="images/tool-bowl.jpg" alt="ชามผสม">
+      <h3>ชามผสม</h3>
+      <p>ใช้สำหรับผสมวัตถุดิบต่าง ๆ</p>
+    </div>
+
+    <div class="ingredient-card">
+      <img src="images/tool-whisk.jpg" alt="ตะกร้อ">
+      <h3>ตะกร้อ</h3>
+      <p>ใช้คนหรือผสมส่วนผสมให้เข้ากัน</p>
+    </div>
+
+    <div class="ingredient-card">
+      <img src="images/tool-pan.jpg" alt="ถาดอบ">
+      <h3>ถาดอบ</h3>
+      <p>ใช้ใส่ขนมก่อนนำเข้าเตาอบ</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="wave"></div>
+
+  <div class="footer-inner">
+    <div>
+      <strong>เว็บไซต์ขั้นตอนการทำขนม</strong><br>
+      จัดทำเพื่อการศึกษา
+    </div>
+
+    <div>
+      <strong>เมนูเว็บไซต์</strong><br>
+      หน้าแรก<br>
+      สูตรขนม<br>
+      วัตถุดิบ<br>
+      ขั้นตอนการทำ
+    </div>
+
+    <div>
+      <strong>ข้อมูลเพิ่มเติม</strong><br>
+      วัตถุดิบพื้นฐาน<br>
+      อุปกรณ์เบื้องต้น
+    </div>
+
+    <div>
+      <strong>ติดต่อเรา</strong><br>
+      ผู้จัดทำเว็บไซต์
+    </div>
+  </div>
+</footer>
+
+<!-- ===== SCROLL ANIMATION ===== -->
+<script>
+const reveals = document.querySelectorAll('.reveal');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+},{ threshold:0.15 });
+
+reveals.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
