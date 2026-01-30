@@ -3,13 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ติดต่อเรา</title>
+<title>ติดต่อเรา | เว็บไซต์ขั้นตอนการทำขนม</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 
 body{
-  font-family:Tahoma,sans-serif;
+  font-family:'Prompt',sans-serif;
   background:#fffaf7;
   color:#333;
 }
@@ -27,140 +30,148 @@ body{
   justify-content:space-between;
   align-items:center;
 }
-.logo{font-size:22px;font-weight:bold}
+.logo{font-size:22px;font-weight:600}
 .nav{display:flex;gap:20px}
-.nav a{text-decoration:none;color:#333;font-size:14px}
+.nav a{text-decoration:none;color:#444;font-size:14px}
 .nav a:hover{color:#ff5fa2}
 
-/* ===== TITLE ===== */
-.page-title{
-  max-width:1000px;
-  margin:70px auto;
-  padding:0 20px;
-}
-.page-title h1{
-  color:#ff5fa2;
-  margin-bottom:10px;
-}
-.page-title h1::before{
-  content:"📮 ";
-}
-
-/* ===== SECTION ===== */
-.section{
-  max-width:1100px;
+/* ===== PAGE ===== */
+.contact-page{
+  max-width:900px;
   margin:80px auto;
   padding:0 20px;
 }
-.contact-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:40px;
+.contact-page h1{
+  text-align:center;
+  color:#ff5fa2;
+  margin-bottom:8px;
+}
+.contact-page p{
+  text-align:center;
+  color:#555;
+  margin-bottom:50px;
 }
 
-/* ===== INFO ===== */
-.info-box{
+/* ===== CONTACT INFO (VERTICAL) ===== */
+.contact-info{
   background:#fff;
-  border-radius:26px;
   padding:30px;
+  border-radius:24px;
   box-shadow:0 10px 25px rgba(0,0,0,.08);
+  margin-bottom:40px;
 }
-.info-box h2{
+.contact-info h2{
   color:#ff5fa2;
   margin-bottom:16px;
 }
-.info-box p{
-  line-height:1.8;
+.contact-info .item{
+  display:flex;
+  align-items:center;
+  gap:14px;
   margin-bottom:12px;
+  font-size:15px;
 }
+.contact-info img{
+  width:28px;
+  height:28px;
+}
+
+/* ===== SOCIAL ===== */
+.social-section{
+  margin-bottom:50px;
+}
+.social-section h2{
+  color:#ff5fa2;
+  margin-bottom:16px;
+}
+.social-list{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:20px;
+}
+.social-card{
+  background:#fff;
+  padding:22px 16px;
+  border-radius:22px;
+  text-align:center;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+  transition:.3s;
+}
+.social-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 18px 40px rgba(255,95,162,.25);
+}
+.social-card img{
+  width:46px;
+  height:46px;
+  margin-bottom:10px;
+}
+.social-card h3{margin-bottom:4px}
+.social-card span{font-size:14px;color:#666}
 
 /* ===== FORM ===== */
-.form-box{
+.contact-form{
   background:#fff;
+  padding:32px;
   border-radius:26px;
-  padding:30px;
-  box-shadow:0 10px 25px rgba(0,0,0,.08);
-  position:relative;
+  box-shadow:0 12px 30px rgba(0,0,0,.1);
 }
-.form-box h2{
+.contact-form h2{
   color:#ff5fa2;
+  margin-bottom:18px;
+}
+.form-group{
   margin-bottom:16px;
 }
-
-form{
-  display:flex;
-  flex-direction:column;
-  gap:14px;
+.form-group label{
+  display:block;
+  font-size:14px;
+  margin-bottom:6px;
 }
-
-input, textarea{
-  padding:14px;
+.form-group input,
+.form-group textarea{
+  width:100%;
+  padding:12px 14px;
   border-radius:14px;
   border:1px solid #ddd;
+  font-family:'Prompt',sans-serif;
   font-size:14px;
   transition:.3s;
 }
-input:focus, textarea:focus{
+.form-group input:focus,
+.form-group textarea:focus{
   outline:none;
   border-color:#ff5fa2;
-  box-shadow:0 0 0 3px rgba(255,95,162,.15);
+  box-shadow:0 0 0 3px rgba(255,95,162,.2);
 }
 textarea{
   resize:none;
   height:120px;
 }
 
-/* BUTTON */
 button{
-  background:linear-gradient(135deg,#ff5fa2,#ff9f68);
+  width:100%;
+  background:#ff5fa2;
   color:#fff;
   border:none;
   padding:14px;
   border-radius:18px;
-  font-size:15px;
+  font-size:16px;
   cursor:pointer;
   transition:.3s;
-  position:relative;
-  overflow:hidden;
 }
-button.loading{
-  pointer-events:none;
-  background:#ccc;
-}
-button.loading::after{
-  content:"⏳ กำลังส่ง...";
+button:hover{
+  background:#ff3f91;
 }
 
-/* SUCCESS BOX */
-.success-box{
-  position:absolute;
-  top:20px;
-  left:20px;
-  right:20px;
-  background:#e6fff1;
-  border:1px solid #4dd599;
-  color:#2e7d5a;
-  padding:16px;
-  border-radius:16px;
+.success{
+  display:none;
+  margin-top:16px;
+  background:#e8fff1;
+  color:#1a7f4b;
+  padding:14px;
+  border-radius:14px;
   text-align:center;
-  opacity:0;
-  transform:translateY(-10px);
-  transition:.5s;
-}
-.success-box.show{
-  opacity:1;
-  transform:translateY(0);
-}
-
-/* ===== SCROLL ANIMATION ===== */
-.reveal{
-  opacity:0;
-  transform:translateY(40px);
-  transition:1s;
-}
-.reveal.show{
-  opacity:1;
-  transform:translateY(0);
 }
 
 /* ===== FOOTER ===== */
@@ -176,18 +187,22 @@ button.loading::after{
   font-size:14px;
 }
 
-/* ===== RESPONSIVE ===== */
-@media(max-width:900px){
-  .contact-grid{grid-template-columns:1fr}
+/* RESPONSIVE */
+@media(max-width:768px){
   .nav{display:none}
 }
 </style>
 </head>
 
 <body>
+	
+	<!-- ===== BANNER ===== -->
+<section class="banner">
+  <img src="images/banner.jpg" alt="แบนเนอร์เว็บไซต์">
+</section>
 
 <!-- HEADER -->
-<header class="header reveal">
+<header class="header">
   <div class="header-inner">
     <div class="logo">เว็บไซต์ขั้นตอนการทำขนม</div>
     <nav class="nav">
@@ -201,87 +216,85 @@ button.loading::after{
   </div>
 </header>
 
-<!-- TITLE -->
-<section class="page-title reveal">
+<section class="contact-page">
   <h1>ติดต่อเรา</h1>
-  <p>
-    หากมีคำถามหรือข้อเสนอแนะเกี่ยวกับการทำขนม  
-    สามารถส่งข้อความถึงเราได้
-  </p>
-</section>
+  <p>สามารถติดต่อผู้จัดทำเว็บไซต์ได้ผ่านช่องทางด้านล่าง</p>
 
-<!-- CONTENT -->
-<section class="section">
-  <div class="contact-grid">
-
-    <div class="info-box reveal">
-	<h2>📌 ข้อมูลติดต่อ</h2>
-      <p>📧 example@email.com</p>
-      <p>📞 099-999-9999</p>
+  <!-- EMAIL + PHONE (VERTICAL) -->
+  <div class="contact-info">
+    <h2>ข้อมูลติดต่อ</h2>
+    <div class="item">
+      <img src="images/email.png" alt="Email">
+      <span>example@email.com</span>
     </div>
-
-    <div class="form-box reveal">
-      <div class="success-box" id="successBox">
-        ✅ ส่งข้อความเรียบร้อยแล้ว<br>
-        ขอบคุณที่ติดต่อเรา
-      </div>
-
-      <h2>✉️ ส่งข้อความ</h2>
-
-      <form id="contactForm">
-        <input type="text" placeholder="ชื่อของคุณ" required>
-        <input type="email" placeholder="อีเมล" required>
-        <textarea placeholder="ข้อความที่ต้องการติดต่อ" required></textarea>
-        <button type="submit" id="sendBtn">ส่งข้อความ</button>
-      </form>
+    <div class="item">
+      <img src="images/phone.png" alt="Phone">
+      <span>0X-XXXX-XXXX</span>
     </div>
-
   </div>
+
+  <!-- SOCIAL -->
+  <div class="social-section">
+    <h2>โซเชียลมีเดีย</h2>
+    <div class="social-list">
+      <div class="social-card">
+        <img src="images/facebook.png">
+        <h3>Facebook</h3>
+        <span>facebook.com/yourpage</span>
+      </div>
+      <div class="social-card">
+        <img src="images/line.png">
+        <h3>LINE</h3>
+        <span>@yourline</span>
+      </div>
+      <div class="social-card">
+        <img src="images/instagram.png">
+        <h3>Instagram</h3>
+        <span>@yourinstagram</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FORM (BELOW SOCIAL) -->
+  <form class="contact-form" id="contactForm">
+    <h2>ส่งข้อความถึงเรา</h2>
+
+    <div class="form-group">
+      <label>ชื่อ</label>
+      <input type="text" required>
+    </div>
+
+    <div class="form-group">
+      <label>อีเมล</label>
+      <input type="email" required>
+    </div>
+
+    <div class="form-group">
+      <label>ข้อความ</label>
+      <textarea required></textarea>
+    </div>
+
+    <button type="submit">ส่งข้อความ</button>
+    <div class="success" id="successMsg">✅ ส่งข้อความเรียบร้อยแล้ว</div>
+  </form>
+
 </section>
 
-<!-- FOOTER -->
-<footer class="footer reveal">
+<footer class="footer">
   <div class="footer-inner">
     เว็บไซต์ขั้นตอนการทำขนม | จัดทำเพื่อการศึกษา
   </div>
 </footer>
 
 <script>
-/* ===== FORM SUBMIT EFFECT ===== */
-const form = document.getElementById("contactForm");
-const successBox = document.getElementById("successBox");
-const btn = document.getElementById("sendBtn");
+const form=document.getElementById("contactForm");
+const success=document.getElementById("successMsg");
 
-form.addEventListener("submit", e=>{
+form.addEventListener("submit",e=>{
   e.preventDefault();
-
-  btn.classList.add("loading");
-  btn.textContent = "";
-
-  setTimeout(()=>{
-    btn.classList.remove("loading");
-    btn.textContent = "ส่งข้อความ";
-
-    successBox.classList.add("show");
-    form.reset();
-
-    setTimeout(()=>{
-      successBox.classList.remove("show");
-    },3000);
-
-  },1500);
+  success.style.display="block";
+  form.reset();
 });
-
-/* ===== SCROLL ANIMATION ===== */
-const reveals = document.querySelectorAll('.reveal');
-const observer = new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.classList.add('show');
-    }
-  });
-},{threshold:0.15});
-reveals.forEach(el=>observer.observe(el));
 </script>
 
 </body>
